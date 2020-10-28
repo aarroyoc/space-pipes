@@ -1,25 +1,57 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+// @ts-ignore
+import { ThemeProvider, createTheme, Arwes, Button, SoundsProvider, createSounds } from 'arwes';
+
+import Home from "./home/Home";
+
 import './App.css';
+
+const sounds = {
+  shared: { volume: 1},
+  players: {
+    ask: {
+      sound: { src: ["ask.mp3"]}
+    },
+    click: {
+      sound: { src: ["click.mp3"]}
+    },
+    deploy: {
+      sound: { src: ["deploy.mp3"]}
+    },
+    error: {
+      sound: { src: ["error.mp3"]}
+    },
+    information: {
+      sound: { src: ["information.mp3"]}
+    },
+    typing: {
+      sound: { src: ["typing.mp3"]}
+    },
+    warning: {
+      sound: { src: ["warning.mp3"]}
+    }
+  }
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={createTheme()}>
+      <SoundsProvider sounds={createSounds(sounds)}>
+        <Arwes animate>
+          <Router>
+            <Switch>
+            <Route path="/netwalk">
+                <div>Netwalk</div>
+              </Route>
+              <Route path="/">
+                <Home/>
+              </Route>
+            </Switch>
+          </Router>
+        </Arwes>
+      </SoundsProvider>
+    </ThemeProvider>
   );
 }
 
