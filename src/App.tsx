@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import { ThemeProvider, createTheme, Arwes, Button, SoundsProvider, createSounds } from 'arwes';
 
 import Home from "./home/Home";
+import NetWalk from "./netwalk/NetWalk";
 
 import './App.css';
 
@@ -42,7 +43,7 @@ function App() {
           <Router>
             <Switch>
             <Route path="/netwalk">
-                <div>Netwalk</div>
+                <NetWalk/>
               </Route>
               <Route path="/">
                 <Home/>

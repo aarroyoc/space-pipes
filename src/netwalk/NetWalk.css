@@ -1,0 +1,11 @@
+.netwalk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.netwalk__grid{
+    display: grid;
+    grid-template-columns: 64px 64px 64px 64px 64px;
+}
