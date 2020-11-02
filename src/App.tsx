@@ -1,7 +1,7 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // @ts-ignore
-import { ThemeProvider, createTheme, Arwes, Button, SoundsProvider, createSounds } from 'arwes';
+import { ThemeProvider, createTheme, Arwes, SoundsProvider, createSounds } from 'arwes';
 
 import Home from "./home/Home";
 import NetWalk from "./netwalk/NetWalk";
