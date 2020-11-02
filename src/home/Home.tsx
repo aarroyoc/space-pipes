@@ -8,7 +8,6 @@ import "./Home.css";
 export default function Home(){
     const history = useHistory();
     return (
-        <>
             <div className="home">
                 <Heading node="h1">SpacePipes</Heading>
                 <div className="home__buttons">
@@ -20,6 +19,5 @@ export default function Home(){
                 </div>
                 <small>&copy; Adrián Arroyo Calle</small>
             </div>
-        </>
     );
 }

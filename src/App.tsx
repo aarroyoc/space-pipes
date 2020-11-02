@@ -42,7 +42,7 @@ function App() {
         <Arwes animate>
           <Router>
             <Switch>
-            <Route path="/netwalk">
+              <Route path="/netwalk">
                 <NetWalk/>
               </Route>
               <Route path="/">
