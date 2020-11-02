@@ -3,9 +3,25 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-direction: column;
 }
 
 .netwalk__grid{
     display: grid;
-    grid-template-columns: 64px 64px 64px 64px 64px;
+}
+
+.netwalk__dialog{
+    position: absolute;
+    top: 45vh;
+    z-index: 2000;
+    width: 350px;
+    text-align: center;
+}
+
+.netwalk__details{
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 350px;
 }
