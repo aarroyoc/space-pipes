@@ -1,0 +1,15 @@
+version: "3.6"
+services:
+  builder:
+    build: .
+    command: npm run build
+    volumes:
+    - ./:/opt/space-pipes
+  publisher:
+    build: .
+    command: netlify deploy --dir=build --prod
+    environment: 
+      NETLIFY_AUTH_TOKEN:
+      NETLIFY_SITE_ID: 961543f2-bd8d-42d5-8bbe-319376cacf74
+    volumes:
+    - ./:/opt/pipes
