@@ -163,7 +163,8 @@ export default function NetWalk({size}: NetWalkProps){
     useEffect(()=>{
         if(!win){
             const newGrid = generateGridPrim(size);
-            setGrid(randomizeGrid(newGrid));
+            const randomGrid = randomizeGrid(newGrid);
+            setGrid(randomGrid);
         }
     }, [size, win]);
 

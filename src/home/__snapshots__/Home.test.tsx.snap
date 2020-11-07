@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render matchs snapshot 1`] = `
+<div>
+  <div
+    class="home"
+  >
+    <h1
+      class="Heading-root-0-1-1"
+    >
+      SpacePipes
+    </h1>
+    <div
+      class="home__buttons"
+    >
+      <div
+        class="ArwesSounds(Button)-root-0-1-2"
+      >
+        <div
+          class="ArwesSounds(Frame)-root-0-1-5 ArwesSounds(Frame)-root-0-1-23 ArwesSounds(Frame)-hover-0-1-18 ArwesSounds(Frame)-entering-0-1-19"
+        >
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-25 ArwesSounds(Frame)-borderLeft-0-1-9"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-25 ArwesSounds(Frame)-borderRight-0-1-10"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-25 ArwesSounds(Frame)-borderTop-0-1-11"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-25 ArwesSounds(Frame)-borderBottom-0-1-12"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-26 ArwesSounds(Frame)-cornerLT-0-1-14 ArwesSounds(Frame)-cornerLT-0-1-27"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-26 ArwesSounds(Frame)-cornerLB-0-1-15 ArwesSounds(Frame)-cornerLB-0-1-28"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-26 ArwesSounds(Frame)-cornerRT-0-1-16 ArwesSounds(Frame)-cornerRT-0-1-29"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-26 ArwesSounds(Frame)-cornerRB-0-1-17 ArwesSounds(Frame)-cornerRB-0-1-30"
+          />
+          <div
+            class="ArwesSounds(Frame)-box-0-1-6 ArwesSounds(Frame)-box-0-1-24"
+          >
+            <div
+              class="ArwesSounds(Frame)-children-0-1-7"
+            >
+              <div
+                class="Highlight-root-0-1-31"
+              >
+                <div
+                  class="Highlight-children-0-1-33"
+                >
+                  <button
+                    class="ArwesSounds(Button)-button-0-1-3 ArwesSounds(Button)-button-0-1-4"
+                  >
+                    Play
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="home__padding"
+      />
+      <div
+        class="ArwesSounds(Button)-root-0-1-2"
+      >
+        <div
+          class="ArwesSounds(Frame)-root-0-1-5 ArwesSounds(Frame)-root-0-1-36 ArwesSounds(Frame)-hover-0-1-18 ArwesSounds(Frame)-entering-0-1-19"
+        >
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-38 ArwesSounds(Frame)-borderLeft-0-1-9"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-38 ArwesSounds(Frame)-borderRight-0-1-10"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-38 ArwesSounds(Frame)-borderTop-0-1-11"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-38 ArwesSounds(Frame)-borderBottom-0-1-12"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-39 ArwesSounds(Frame)-cornerLT-0-1-14 ArwesSounds(Frame)-cornerLT-0-1-40"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-39 ArwesSounds(Frame)-cornerLB-0-1-15 ArwesSounds(Frame)-cornerLB-0-1-41"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-39 ArwesSounds(Frame)-cornerRT-0-1-16 ArwesSounds(Frame)-cornerRT-0-1-42"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-39 ArwesSounds(Frame)-cornerRB-0-1-17 ArwesSounds(Frame)-cornerRB-0-1-43"
+          />
+          <div
+            class="ArwesSounds(Frame)-box-0-1-6 ArwesSounds(Frame)-box-0-1-37"
+          >
+            <div
+              class="ArwesSounds(Frame)-children-0-1-7"
+            >
+              <div
+                class="Highlight-root-0-1-31"
+              >
+                <div
+                  class="Highlight-children-0-1-33"
+                >
+                  <button
+                    class="ArwesSounds(Button)-button-0-1-3 ArwesSounds(Button)-button-0-1-35"
+                  >
+                    Settings
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="home__padding"
+      />
+      <div
+        class="ArwesSounds(Button)-root-0-1-2"
+      >
+        <div
+          class="ArwesSounds(Frame)-root-0-1-5 ArwesSounds(Frame)-root-0-1-46 ArwesSounds(Frame)-hover-0-1-18 ArwesSounds(Frame)-entering-0-1-19"
+        >
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-48 ArwesSounds(Frame)-borderLeft-0-1-9"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-48 ArwesSounds(Frame)-borderRight-0-1-10"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-48 ArwesSounds(Frame)-borderTop-0-1-11"
+          />
+          <div
+            class="ArwesSounds(Frame)-border-0-1-8 ArwesSounds(Frame)-border-0-1-48 ArwesSounds(Frame)-borderBottom-0-1-12"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-49 ArwesSounds(Frame)-cornerLT-0-1-14 ArwesSounds(Frame)-cornerLT-0-1-50"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-49 ArwesSounds(Frame)-cornerLB-0-1-15 ArwesSounds(Frame)-cornerLB-0-1-51"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-49 ArwesSounds(Frame)-cornerRT-0-1-16 ArwesSounds(Frame)-cornerRT-0-1-52"
+          />
+          <div
+            class="ArwesSounds(Frame)-corner-0-1-13 ArwesSounds(Frame)-corner-0-1-49 ArwesSounds(Frame)-cornerRB-0-1-17 ArwesSounds(Frame)-cornerRB-0-1-53"
+          />
+          <div
+            class="ArwesSounds(Frame)-box-0-1-6 ArwesSounds(Frame)-box-0-1-47"
+          >
+            <div
+              class="ArwesSounds(Frame)-children-0-1-7"
+            >
+              <div
+                class="Highlight-root-0-1-31"
+              >
+                <div
+                  class="Highlight-children-0-1-33"
+                >
+                  <button
+                    class="ArwesSounds(Button)-button-0-1-3 ArwesSounds(Button)-button-0-1-45"
+                  >
+                    Rules
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <small>
+      © Adrián Arroyo Calle
+    </small>
+  </div>
+</div>
+`;
