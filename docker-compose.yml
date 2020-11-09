@@ -5,6 +5,11 @@ services:
     command: npm run build
     volumes:
     - ./:/opt/space-pipes
+  test:
+    build: .
+    command: npm run test
+    volumes:
+    - ./:/opt/space-pipes
   publisher:
     build: .
     command: netlify deploy --dir=build --prod

@@ -6,8 +6,10 @@ import { ThemeProvider, createTheme, Arwes, SoundsProvider, createSounds } from 
 import Home from "./home/Home";
 import SizeSelector from "./sizeselector/SizeSelector";
 import NetWalk from "./netwalk/NetWalk";
+import HexaWalk from './hexawalk/HexaWalk';
 
 import './App.css';
+
 
 const sounds = {
   shared: { volume: 1},
@@ -43,6 +45,9 @@ function App() {
         <Arwes animate>
           <Router>
             <Switch>
+              <Route path="/hexawalk">
+                <HexaWalk size={3}/>
+              </Route>
               <Route path="/netwalk/5">
                 <NetWalk size={5}/>
               </Route>

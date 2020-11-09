@@ -13,6 +13,8 @@ export default function Home(){
                 <div className="home__buttons">
                     <Button animate layer="success" onClick={() => history.push("/netwalk")}>Play</Button>
                     <div className="home__padding"></div>
+                    <Button animate layer="success" onClick={() => history.push("/hexawalk")}>HexaWalk</Button>
+                    <div className="home__padding"></div>
                     <Button animate>Settings</Button>
                     <div className="home__padding"></div>
                     <Button animate>Rules</Button>
