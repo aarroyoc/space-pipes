@@ -11,13 +11,11 @@ export default function Home(){
             <div className="home">
                 <Heading node="h1">SpacePipes</Heading>
                 <div className="home__buttons">
-                    <Button animate layer="success" onClick={() => history.push("/netwalk")}>Play</Button>
+                    <Button animate layer="success" onClick={() => history.push("/netwalk")}>Play square mode</Button>
                     <div className="home__padding"></div>
-                    <Button animate layer="success" onClick={() => history.push("/hexawalk")}>HexaWalk</Button>
+                    <Button animate layer="success" onClick={() => history.push("/hexawalk")}>Play hexa mode</Button>
                     <div className="home__padding"></div>
-                    <Button animate>Settings</Button>
-                    <div className="home__padding"></div>
-                    <Button animate>Rules</Button>
+                    <Button animate onClick={() => history.push("/rules")}>Rules</Button>
                 </div>
                 <small>&copy; Adrián Arroyo Calle</small>
             </div>

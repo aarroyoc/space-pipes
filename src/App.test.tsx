@@ -15,7 +15,7 @@ test('renders', () => {
 
 test("click on play", () => {
   render(<App/>);
-  const playButton = screen.getByText("Play");
+  const playButton = screen.getByText("Play square mode");
   fireEvent.click(playButton);
   const instructions = screen.queryByText("Select the size of the puzzle")
   expect(instructions).toBeInTheDocument();

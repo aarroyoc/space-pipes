@@ -114,7 +114,7 @@ generate_grid(X, Y, HexCell) :-
 % hexacell(point(1, 1), false, false, false, true, false, false).
 % hexacell(point(1, 2), true, false, false, false, false, false).
 
-solve_grid(Connected) :-
+solve_grid_v0(Connected) :-
     findall(P1, (
         hexacell(P1, _, _, _, _, _,_),
         connected(P1)
@@ -123,43 +123,82 @@ solve_grid(Connected) :-
 connected(Point) :- origin(Point).
 connected(Point) :- origin(Origin), connected(Origin, Point, []).
 
-step_connect(P1, P2, Visited) :-
+step_connect(P1, P2) :-
     hexacell(P1, true, _, _, _, _, _),
     hexacell(P2, _, _, _, true, _, _),
-    \+ member(P2, Visited),
     up(P1, P2).
 
-step_connect(P1, P2, Visited) :-
+step_connect(P1, P2) :-
     hexacell(P1, _, true, _, _, _, _),
     hexacell(P2, _, _, _, _, true, _),
-    \+ member(P2, Visited),
     upright(P1, P2).
 
-step_connect(P1, P2, Visited) :-
+step_connect(P1, P2) :-
     hexacell(P1, _, _, true, _, _, _),
     hexacell(P2, _, _, _, _, _, true),
-    \+ member(P2, Visited),
     downright(P1, P2).
 
-step_connect(P1, P2, Visited) :-
+step_connect(P1, P2) :-
     hexacell(P1, _, _, _, true, _, _),
     hexacell(P2, true, _, _, _, _, _),
-    \+ member(P2, Visited),
     down(P1, P2).
 
-step_connect(P1, P2, Visited) :-
+step_connect(P1, P2) :-
     hexacell(P1, _, _, _, _, true, _),
     hexacell(P2, _, true, _, _, _, _),
-    \+ member(P2, Visited),
     downleft(P1, P2).
 
-step_connect(P1, P2, Visited) :-
+step_connect(P1, P2) :-
     hexacell(P1, _, _, _, _, _, true),
     hexacell(P2, _, _, true, _, _, _),
-    \+ member(P2, Visited),
     upleft(P1, P2).
 
 connected(P1, P1, _).
 connected(P1, P2, Visited) :-
     step_connect(P1, P3, Visited),
     connected(P3, P2, [P1|Visited]).
+
+solve_grid(Connected) :-
+    origin(Origin),
+    solve_grid([Origin], [], Connected).
+
+%%% TEST DATA
+% origin(point(3,3)).
+% size(5).
+% hexacell(point(2, 1), false, false, false, false, true, false).
+% hexacell(point(5, 1), false, false, false, false, false, true).
+% hexacell(point(2, 2), false, false, false, false, true, false).
+% hexacell(point(4, 2), false, false, false, true, false, false).
+% hexacell(point(1, 1), false, true, false, true, false, false).
+% hexacell(point(4, 1), false, false, true, false, true, false).
+% hexacell(point(5, 2), false, false, false, true, false, false).
+% hexacell(point(1, 2), true, true, false, true, false, false).
+% hexacell(point(3, 1), false, true, false, true, false, false).
+% hexacell(point(2, 5), true, false, false, false, false, false).
+% hexacell(point(5, 4), false, false, false, false, false, true).
+% hexacell(point(4, 3), true, false, false, false, true, false).
+% hexacell(point(5, 3), true, false, false, false, true, false).
+% hexacell(point(4, 5), true, false, false, false, false, false).
+% hexacell(point(1, 3), true, false, false, true, false, false).
+% hexacell(point(3, 2), true, false, false, true, false, false).
+% hexacell(point(4, 4), false, true, false, true, true, true).
+% hexacell(point(1, 4), true, true, false, false, false, false).
+% hexacell(point(2, 3), false, false, true, false, false, false).
+% hexacell(point(2, 4), false, true, false, true, true, false).
+% hexacell(point(3, 4), false, true, false, false, false, true).
+% hexacell(point(3, 3), true, true, true, false, true, true).
+%%% END TEST DATA
+solve_grid_v1([], V, V).
+solve_grid_v1([Point|Points], Visited, FinalConnected) :-
+    findall(NewPoint, step_connect(Point, NewPoint, Visited), Connected),
+    append(Connected, Points, AllPoints),
+    solve_grid(AllPoints, [Point|Visited], FinalConnected).
+
+solve_grid([], V, V).
+solve_grid([Point|Points], InVisited, OutVisited) :-
+    findall(NewPoint, (
+        step_connect(Point, NewPoint),
+        \+ member(NewPoint, InVisited)), NewPoints),
+    append(Points, NewPoints, AllPoints),
+    list_to_set(AllPoints, AllPointsSet),
+    solve_grid(AllPointsSet, [Point|InVisited], OutVisited).

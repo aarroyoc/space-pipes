@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme, Arwes, SoundsProvider, createSounds } from 
 
 import Home from "./home/Home";
 import SizeSelector from "./sizeselector/SizeSelector";
+import Rules from "./rules/Rules";
 import NetWalk from "./netwalk/NetWalk";
 import HexaWalk from './hexawalk/HexaWalk';
 
@@ -45,8 +46,14 @@ function App() {
         <Arwes animate>
           <Router>
             <Switch>
+              <Route path="/hexawalk/5">
+                <HexaWalk size={5}/>
+              </Route>
+              <Route path="/hexawalk/7">
+                <HexaWalk size={7}/>
+              </Route>
               <Route path="/hexawalk">
-                <HexaWalk size={3}/>
+                <SizeSelector to="hexawalk" sizes={new Set([5, 7])}/>
               </Route>
               <Route path="/netwalk/5">
                 <NetWalk size={5}/>
@@ -58,7 +65,10 @@ function App() {
                 <NetWalk size={9}/>
               </Route>
               <Route path="/netwalk">
-                <SizeSelector/>
+                <SizeSelector to="netwalk" sizes={new Set([5,7,9])}/>
+              </Route>
+              <Route path="/rules">
+                <Rules/>
               </Route>
               <Route path="/">
                 <Home/>

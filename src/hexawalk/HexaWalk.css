@@ -8,8 +8,8 @@
 
 .hexawalk__grid{
     display: grid;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
 }
 

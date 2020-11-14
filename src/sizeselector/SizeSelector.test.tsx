@@ -7,7 +7,7 @@ import SizeSelector from "./SizeSelector";
 test("render matchs snapshot", () => {
     const {container} = render(
         <ThemeProvider theme={createTheme()}>
-            <SizeSelector/>
+            <SizeSelector to="netwalk" sizes={new Set([5, 7, 9])}/>
         </ThemeProvider>);
     expect(container).toMatchSnapshot();
 });
