@@ -1,0 +1,1 @@
+You're offline and trying to access a non-cached content. Please connect to the Internet.
