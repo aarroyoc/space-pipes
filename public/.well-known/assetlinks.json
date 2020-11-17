@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "eu.adrianistan.space_pipes.twa",
+                   "sha256_cert_fingerprints": ["10:B9:23:D7:2D:41:89:BE:C6:B7:7F:7B:77:84:E6:A2:92:1F:59:6E:F1:44:BE:EE:2C:7F:3A:DA:26:7D:8D:C7"] }
+    }]
