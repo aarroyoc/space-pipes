@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,10 +10,37 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
 if("serviceWorker" in navigator){
   navigator.serviceWorker.register("/serviceworker.js");
+}
+
+/* GameDistribution SDK */
+if(true){
+  (window as any)["GD_OPTIONS"] = {
+    "gameId": "22940b4195e840c0bf64d1fd970637f9",
+    "onEvent": function(event: any) {
+        switch (event.name) {
+            case "SDK_GAME_START":
+                // advertisement done, resume game logic and unmute audio
+                break;
+            case "SDK_GAME_PAUSE":
+                // pause game logic / mute audio
+                break;
+            case "SDK_GDPR_TRACKING":
+                // this event is triggered when your user doesn't want to be tracked
+                break;
+            case "SDK_GDPR_TARGETING":
+                // this event is triggered when your user doesn't want personalised targeting of ads and such
+                break;
+        }
+    },
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0] as HTMLElement;
+    if (d.getElementById(id)) return;
+    js = d.createElement(s) as HTMLScriptElement;
+    js.id = id;
+    js.src = 'https://html5.api.gamedistribution.com/main.min.js';
+    fjs?.parentNode?.insertBefore(js, fjs);
+  }(document, 'script', 'gamedistribution-jssdk'));
 }
