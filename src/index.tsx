@@ -15,7 +15,7 @@ if("serviceWorker" in navigator){
 }
 
 /* GameDistribution SDK */
-if(true){
+if(false){
   (window as any)["GD_OPTIONS"] = {
     "gameId": "22940b4195e840c0bf64d1fd970637f9",
     "onEvent": function(event: any) {
