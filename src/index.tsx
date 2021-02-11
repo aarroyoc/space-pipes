@@ -14,6 +14,10 @@ if("serviceWorker" in navigator){
   navigator.serviceWorker.register("/serviceworker.js");
 }
 
+const location = window.location.href.split("/");
+const prefix = location.slice(0, location.length - 1).join("/")
+sessionStorage.setItem("prefix-url", prefix);
+
 /* GameDistribution SDK */
 if(false){
   (window as any)["GD_OPTIONS"] = {

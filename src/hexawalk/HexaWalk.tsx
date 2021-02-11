@@ -100,7 +100,8 @@ export default function HexaWalk({size}: Props){
     });
 
     useEffect(()=>{
-        fetch("/prolog/hexaprim.pl")
+        const prefix = sessionStorage.getItem("prefix-url");
+        fetch(`${prefix}/prolog/hexaprim.pl`)
         .then((response)=>{
             return response.text();
         })
