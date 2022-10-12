@@ -1,5 +1,11 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target" : { "namespace": "android_app", "package_name": "eu.adrianistan.space_pipes.twa",
-                   "sha256_cert_fingerprints": ["10:B9:23:D7:2D:41:89:BE:C6:B7:7F:7B:77:84:E6:A2:92:1F:59:6E:F1:44:BE:EE:2C:7F:3A:DA:26:7D:8D:C7"] }
-    }]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "eu.adrianistan.spacepipes",
+      "sha256_cert_fingerprints":
+        ["EA:61:38:9C:BE:2E:23:87:5B:87:D8:35:81:13:B9:8A:9E:07:BF:DA:BD:EB:2C:95:BE:09:CA:87:10:21:C7:5E"]
+    }
+  }
+]
